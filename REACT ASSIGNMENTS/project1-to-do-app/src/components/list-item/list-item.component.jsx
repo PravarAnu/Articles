@@ -21,13 +21,13 @@ function ListItem({ list, deleteItem, editItem }) {
                 </div>
 
                 <div className="modification">
-                    <p onClick={() => setExpand(true)}>✒️</p>
+                    <p onClick={() => setExpand(!expand)}>✒️</p>
                     <p onClick={() => deleteItem(list)}>❌</p>
                 </div>
             </div>
 
             {expand && (
-                <div className="form">
+                <div className="form edit-form">
                     <input
                         type="text"
                         onChange={handleChange}
