@@ -273,8 +273,8 @@ main.addEventListener('click', function (e) {
     console.log(leftSe)
 
 
-    newDiv.style.top = `${topSe}px`;
-    newDiv.style.left = `${leftSe}px`;
+    newDiv.style.top = `${topSe-5}px`;
+    newDiv.style.left = `${leftSe-5}px`;
     
     main.appendChild(newDiv);
 });
