@@ -184,6 +184,30 @@
         <!-- end wrapper -->
     </div>
     <!-- end container -->
+
+    <script>
+        const colors = ["#e8913d", "#ea4b7e", "#f38628", "#7ab334", "#4ca5fc"];
+        const cardStats = document.querySelectorAll(".clash-card__unit-stats");
+  
+        for (i = 0; i < cardStats.length; i++) {
+          cardStats[i].style.backgroundColor = colors[i];
+          cardStats[i].style.color = "#fff";
+  
+          // changing color of cost
+          cardStats[i].lastElementChild.style.color = "#fff";
+        }
+  
+        // changing title of 2nd and 4th card
+        const clashLevel = document.querySelectorAll(".clash-card__level");
+        for (i = 0; i < clashLevel.length; i++) {
+          if (i === 1) {
+            clashLevel[i].nextElementSibling.textContent = "The Archer";
+          }
+          if (i === 3) {
+            clashLevel[i].nextElementSibling.textContent = "The Goblin";
+          }
+        }
+      </script>
 </body>
 
 </html>
